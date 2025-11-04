@@ -1,12 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://dq71m2m2arpre"]
+[gd_scene load_steps=21 format=3 uid="uid://dq71m2m2arpre"]
 
-[ext_resource type="Texture2D" uid="uid://b1n2hmpwij2bx" path="res://icon.svg" id="1_5dqs4"]
 [ext_resource type="Script" path="res://player.gd" id="1_suxhs"]
 [ext_resource type="Texture2D" uid="uid://lb2qqjrl2xx5" path="res://Assets/Actor/Characters/Caveman/SeparateAnim/Walk.png" id="3_ax4s2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d1dxg"]
-radius = 33.0
-height = 118.0
+radius = 6.0
+height = 16.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bmjo4"]
 atlas = ExtResource("3_ax4s2")
@@ -146,13 +145,10 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_suxhs")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_5dqs4")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_d1dxg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2emag")
 animation = &"walk_left"
-frame_progress = 0.156853
+frame_progress = 0.563154
